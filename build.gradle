@@ -1,0 +1,33 @@
+group = 'br.com.bluesoft'
+version = "1.0"
+sourceCompatibility = 1.7
+
+ext {
+    SPRING_VERSION = '3.2.1.RELEASE'
+    GROOVY_VERSION = '2.1.7'
+    SLF4J_VERSION = '1.6.1'
+
+    JUNIT_VERSION = '4.10'
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+subprojects {
+    group = rootProject.group
+    version = rootProject.version
+    sourceCompatibility = rootProject.sourceCompatibility
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}

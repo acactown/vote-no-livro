@@ -1,0 +1,5 @@
+apply plugin: 'groovy'
+
+dependencies {
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: GROOVY_VERSION
+}
